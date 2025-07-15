@@ -18,7 +18,8 @@ const FaceExpressionDetector = () => {
 
     const loadModels = async () => {
         try {
-            const MODEL_URL = '/model';
+            const MODEL_URL = 'https://justadudewhohacks.github.io/face-api.js/models';
+
             await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
             await faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL);
             console.log("📦 Models loaded");
